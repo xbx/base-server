@@ -1,0 +1,16 @@
+web:
+  build: .
+  ports:
+    - "3000:3000"
+  links:
+    - db # liaison avec la DB
+  environment:
+    PORT: 3000
+  volumes:
+    - .:/usr/src/app
+    - /usr/src/app/node_modules
+db:
+  image: mongo:3.3
+  ports:
+    - "27017:27017"
+  command: "--smallfiles --logpath=/dev/null"
