@@ -1,11 +1,11 @@
 web:
   build: .
   ports:
-    - "3000:3000"
+    - "1234:1234"
   links:
     - db # liaison avec la DB
   environment:
-    PORT: 3000
+    PORT: 1234
   volumes:
     - .:/usr/src/app
     - /usr/src/app/node_modules
