@@ -5,7 +5,8 @@
   "author": "First Last <first.last@example.com>",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "watch": "nodemon index.js"
   },
   "dependencies": {
     "babel": "^6.5.2",
