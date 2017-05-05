@@ -6,9 +6,11 @@ web:
     - db # liaison avec la DB
   environment:
     PORT: 1234
+  command: /command.sh
   volumes:
-    - .:/usr/src/app
-    - /usr/src/app/node_modules
+    - ./src/:/usr/src/app/src/
+    - ./node_modules:/usr/src/app/node_modules
+    - ./command.sh:/command.sh
 db:
   image: mongo:3.3
   ports:
