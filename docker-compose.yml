@@ -3,7 +3,7 @@ web:
   ports:
     - "1234:1234"
   links:
-    - db # liaison avec la DB
+    - db
   environment:
     PORT: 1234
   command: /command.sh
